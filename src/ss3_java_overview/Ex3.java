@@ -5,20 +5,28 @@ import java.util.Scanner;
 public class Ex3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap ten san pham:");
-        String tenSP = sc.nextLine();
+        String productName;
+        do {
+            System.out.println("Enter name Product: ");
+            productName = sc.nextLine();
+            if(productName.matches("\\d++")){
+                System.out.println("Invalid Name!");
+            }
+        } while (productName.matches("\\d++"));
+
         System.out.println("So luong:");
-        int sl = sc.nextInt() ;
+        int amount = sc.nextInt();
         System.out.println("Don gia: :");
-        double price = sc.nextDouble() ;
+        double price = sc.nextDouble();
         // tinh tien
-        double tien = sl * price;
+        double tien = amount * price;
         // tinh thue
         double thue = tien * 0.1;
-        System.out.println("ten san pham: " + tenSP);
-        System.out.println("so luong: " + sl);
+        System.out.println("ten san pham: " + productName);
+        System.out.println("so luong: " + amount);
         System.out.println("Thue: " + thue);
 
 
     }
-}
+    }
+

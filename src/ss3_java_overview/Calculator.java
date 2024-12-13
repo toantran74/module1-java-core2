@@ -11,11 +11,12 @@ public class Calculator {
         Integer soB = Integer.parseInt(sc.nextLine());
         int sum = soA + soB;
         int effect = soA - soB;
-        int nhan = soA * soB;
-        double chia = (double) soA / soB;
-        System.out.println("Tong: " + sum);
+        int mul = soA * soB;
+        double div = (double) soA / soB;
+        System.out.printf("%d + %d = %d", soA, soB, soA + soB);
+        System.out.println();
         System.out.println("Hieu: " + effect);
-        System.out.println("Tich: " + nhan);
-        System.out.println("Thuong: " + chia);
+        System.out.println("Tich: " + mul);
+        System.out.println("Thuong: " + div);
     }
 }
