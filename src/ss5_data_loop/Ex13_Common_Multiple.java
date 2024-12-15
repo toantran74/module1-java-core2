@@ -10,22 +10,11 @@ public class Ex13_Common_Multiple {
         System.out.println("Enter the second number: ");
         int b = sc.nextInt();
         int common = 1;
+        int multiple = 0;
         for (int i = a; i >= 1; i--) {
             if (a % i == 0 && b % i == 0) {
                 common = i;
-                break;
-            } else {
-                System.out.println("Not a Common!");
-                break;
-            }
-        }
-        int multiple = 0;
-        for (int i = a; true; i++) {
-            if (i % a == 0 && i % b == 0) {
-                multiple = i;
-                break;
-            } else {
-                System.out.println("Not a Multiple!");
+                multiple = (a*b)/common;
                 break;
             }
         }
