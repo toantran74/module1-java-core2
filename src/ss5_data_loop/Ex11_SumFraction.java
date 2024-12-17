@@ -7,7 +7,7 @@ public class Ex11_SumFraction {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number: ");
         int num = sc.nextInt();
-        double sum = 0.0d;
+        long sum = 0;
         for (int i = 1; i <= num; i++) {
             int factor = 1;
             for (int j = 1; j <= (2 * i - 1); j++) { // (2*i-1) oddNumber
